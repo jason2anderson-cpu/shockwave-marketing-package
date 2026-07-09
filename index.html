@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shockwave Marketing Package — Program Overview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0B2545; --navy2:#13315C; --ink:#1e293b; --muted:#64748b;
+    --teal:#0d9488; --teal-bright:#5eead4; --green:#16a34a; --green-bright:#4ade80;
+    --amber-light:#fef3c7; --bg:#f8fafc; --card:#ffffff; --line:#e2e8f0;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--ink);background:var(--bg);line-height:1.5;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:980px;margin:0 auto;padding:0 20px}
+
+  .hdr{background:linear-gradient(160deg,var(--navy) 0%,var(--navy2) 70%,#1d4ed8 140%);color:#fff;padding:34px 0 30px;text-align:center}
+  .badge{display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:#e0f2fe;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:6px 14px;border-radius:999px;margin-bottom:14px}
+  .hdr h1{font-size:clamp(24px,3.6vw,34px);font-weight:800;line-height:1.15;letter-spacing:-.02em;max-width:720px;margin:0 auto 8px}
+  .hdr h1 em{font-style:normal;color:var(--teal-bright)}
+  .hdr p{font-size:15.5px;color:#cbd5e1;max-width:620px;margin:0 auto}
+
+  .main{padding:28px 0 8px}
+  .cols{display:grid;grid-template-columns:1.15fr .85fr;gap:20px;align-items:stretch}
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px 26px}
+  .panel h2{font-size:16px;font-weight:800;color:var(--navy);margin-bottom:14px}
+  .inc{list-style:none}
+  .inc li{padding:7.5px 0 7.5px 30px;position:relative;font-size:14.5px;border-bottom:1px dashed var(--line)}
+  .inc li:last-child{border-bottom:none}
+  .inc li::before{content:"✓";position:absolute;left:2px;top:7px;color:var(--green);font-weight:800}
+  .inc b{color:var(--navy)}
+  .inc span{color:var(--muted)}
+
+  .offer{background:var(--card);border:2px solid var(--teal);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+  .offer .oh{background:var(--teal);color:#fff;text-align:center;padding:9px;font-weight:700;font-size:12.5px;letter-spacing:.05em;text-transform:uppercase}
+  .offer .ob{padding:20px 24px 22px;text-align:center;flex:1;display:flex;flex-direction:column;justify-content:center}
+  .offer .free{font-size:32px;font-weight:800;color:var(--navy);letter-spacing:-.02em}
+  .offer .then{font-size:14.5px;color:var(--muted);margin:4px 0 14px}
+  .offer .then b{color:var(--navy)}
+  .offer .live{font-size:13px;color:var(--teal);font-weight:700;margin-bottom:14px}
+  .adspend{background:var(--amber-light);border:1px solid #fde68a;border-radius:12px;padding:13px 15px;font-size:13px;color:#78350f;text-align:left;line-height:1.55}
+  .adspend b{color:#92400e}
+
+  .strip{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:24px}
+  .strip .wrap{display:flex;flex-wrap:wrap;justify-content:center;padding:16px 20px}
+  .stat{flex:1;min-width:180px;text-align:center;padding:6px 16px;border-right:1px solid var(--line)}
+  .stat:last-child{border-right:none}
+  .stat .num{font-size:22px;font-weight:800;color:var(--navy)}
+  .stat .lbl{font-size:12px;color:var(--muted);font-weight:500;line-height:1.35;margin-top:1px}
+
+  .calc{background:linear-gradient(170deg,var(--navy) 0%,var(--navy2) 100%);color:#fff;padding:34px 0 30px}
+  .calc h2{font-size:22px;font-weight:800;text-align:center;margin-bottom:4px}
+  .calc .sub{font-size:13.5px;color:#94a3b8;text-align:center;margin-bottom:22px}
+  .calcbox{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:26px 28px;display:grid;grid-template-columns:1fr 1.15fr;gap:26px 34px}
+  .estwarn{grid-column:1/-1;background:rgba(245,158,11,.12);border:1px solid rgba(245,158,11,.45);border-radius:10px;padding:10px 14px;font-size:12.5px;color:#fcd34d;text-align:center;font-weight:600;line-height:1.5}
+  .ctrl{margin-bottom:16px}
+  .ctrl label{display:flex;justify-content:space-between;font-size:13px;font-weight:600;color:#cbd5e1;margin-bottom:7px}
+  .ctrl label output{color:var(--teal-bright);font-weight:800;font-size:14.5px}
+  input[type=range]{width:100%;-webkit-appearance:none;appearance:none;height:5px;border-radius:3px;background:rgba(255,255,255,.2);outline:none;cursor:pointer}
+  input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:19px;height:19px;border-radius:50%;background:var(--teal-bright);border:3px solid var(--navy);box-shadow:0 2px 8px rgba(0,0,0,.4)}
+  input[type=range]::-moz-range-thumb{width:19px;height:19px;border-radius:50%;background:var(--teal-bright);border:3px solid var(--navy)}
+  .ctrl .hint{font-size:11.5px;color:#64748b;margin-top:5px;line-height:1.45}
+  .pills{display:flex;gap:8px;margin-top:8px}
+  .pill{flex:1;text-align:center;font-size:11.5px;font-weight:700;padding:8px 4px;border-radius:9px;border:1px solid rgba(255,255,255,.2);color:#94a3b8;cursor:pointer;transition:all .15s;line-height:1.3}
+  .pill small{display:block;font-weight:500;font-size:10px}
+  .pill.on{background:rgba(94,234,212,.15);border-color:var(--teal-bright);color:var(--teal-bright)}
+
+  .roi-hero{text-align:center;background:rgba(94,234,212,.1);border:1px solid rgba(94,234,212,.35);border-radius:14px;padding:16px 12px 14px;margin-bottom:14px}
+  .roi-hero .r{font-size:44px;font-weight:800;color:var(--teal-bright);letter-spacing:-.02em;line-height:1}
+  .roi-hero .rl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#94a3b8;margin-top:6px}
+  .flow{display:flex;justify-content:space-between;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:12px 8px;margin-bottom:12px}
+  .f{flex:1;text-align:center;border-right:1px solid rgba(255,255,255,.12);padding:0 6px}
+  .f:last-child{border-right:none}
+  .f .v{font-size:19px;font-weight:800;color:#fff}
+  .f .l{font-size:10px;color:#94a3b8;font-weight:600;letter-spacing:.03em;text-transform:uppercase;margin-top:2px;line-height:1.3}
+  .costrows .row{display:flex;justify-content:space-between;padding:5.5px 0;border-bottom:1px solid rgba(255,255,255,.1);font-size:12.5px;color:#cbd5e1}
+  .costrows .row .val{font-weight:700;color:#fff}
+  .profit-cards{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+  .pcard{border-radius:12px;padding:12px;text-align:center}
+  .pcard.m1{background:rgba(94,234,212,.14);border:1px solid rgba(94,234,212,.4)}
+  .pcard.ong{background:rgba(74,222,128,.1);border:1px solid rgba(74,222,128,.35)}
+  .pcard .t{font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#94a3b8;margin-bottom:3px}
+  .pcard.m1 .t{color:var(--teal-bright)}
+  .pcard.ong .t{color:var(--green-bright)}
+  .pcard .v{font-size:21px;font-weight:800;color:#fff;letter-spacing:-.01em}
+  .pcard .s{font-size:10.5px;color:#94a3b8;margin-top:2px}
+
+  .proj{margin-top:26px}
+  .proj h3{font-size:16px;font-weight:800;text-align:center;color:#fff;margin-bottom:2px}
+  .proj .psub{font-size:12px;color:#94a3b8;text-align:center;margin-bottom:14px}
+  .chartwrap{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:18px 18px 10px}
+  .chart svg{width:100%;height:auto;display:block}
+  .chart rect{transition:y .4s ease,height .4s ease}
+  .totals{display:flex;flex-wrap:wrap;justify-content:center;gap:0;margin-top:8px;border-top:1px solid rgba(255,255,255,.12);padding-top:12px}
+  .tot{flex:1;min-width:140px;text-align:center;padding:4px 10px;border-right:1px solid rgba(255,255,255,.12)}
+  .tot:last-child{border-right:none}
+  .tot .v{font-size:19px;font-weight:800;color:#fff}
+  .tot.hl .v{color:var(--green-bright)}
+  .tot .l{font-size:10.5px;color:#94a3b8;font-weight:600;text-transform:uppercase;letter-spacing:.04em;margin-top:1px}
+  .legend{display:flex;justify-content:center;gap:18px;font-size:11px;color:#94a3b8;margin-bottom:6px}
+  .legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+  .calc .disclaimer{font-size:10.5px;color:#64748b;text-align:center;max-width:740px;margin:16px auto 0;line-height:1.5}
+
+  .expect{padding:22px 0 26px}
+  .expect .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}
+  .exp{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:12.5px;color:var(--muted);line-height:1.5}
+  .exp b{color:var(--navy);display:block;font-size:13px;margin-bottom:3px}
+
+  footer{background:#0a1e38;color:#64748b;font-size:11px;padding:18px 0;text-align:center;line-height:1.7}
+  footer b{color:#94a3b8}
+
+  @media(max-width:800px){
+    .cols{grid-template-columns:1fr}
+    .calcbox{grid-template-columns:1fr;padding:20px}
+    .profit-cards{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<div class="hdr">
+  <div class="wrap">
+    <div class="badge">Shockwave Marketing Package · Program Overview</div>
+    <h1>Done-for-you patient marketing for your shockwave machine — <em>we handle everything.</em></h1>
+    <p>A complete patient-acquisition system for Pulse Wave owners, built and managed by the team that sold you your machine.</p>
+  </div>
+</div>
+
+<div class="main">
+  <div class="wrap">
+    <div class="cols">
+      <div class="panel">
+        <h2>What you get — all managed for you</h2>
+        <ul class="inc">
+          <li><b>Meta ad campaigns</b> — <span>ads already proven across shockwave clinics nationwide; no trial-and-error phase</span></li>
+          <li><b>Creative production &amp; refresh</b> — <span>professional image + video ads made for you, refreshed before they go stale</span></li>
+          <li><b>Custom booking page</b> — <span>built for shockwave patients; leads book straight onto your calendar</span></li>
+          <li><b>AI lead-nurture assistant</b> — <span>every lead texted back instantly, 24/7 — nights, weekends, holidays</span></li>
+          <li><b>No-show recovery</b> — <span>missed appointments are automatically followed up and re-booked</span></li>
+          <li><b>Patient reactivation campaign</b> — <span>your existing patient list introduced to shockwave at zero ad cost</span></li>
+          <li><b>Live results dashboard</b> — <span>every lead, booking, and show in one place — no mystery reports</span></li>
+          <li><b>Dedicated account manager</b> — <span>one point of contact who knows your practice, monthly check-in included</span></li>
+        </ul>
+      </div>
+      <div class="offer">
+        <div class="oh">Pilot program pricing</div>
+        <div class="ob">
+          <div class="free">First 30 Days Free</div>
+          <div class="then">then <b>$1,400/month</b> · month-to-month · cancel anytime · no setup fees</div>
+          <div class="live">Typically live within 2–3 business days</div>
+          <div class="adspend"><b>You fund your ad budget:</b> $50/day minimum ($1,500/mo), paid directly to Meta on your own ad account — never marked up, never touched by us. Our system is the engine; your ad budget is the gas.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="strip">
+    <div class="wrap">
+      <div class="stat"><div class="num">10–15</div><div class="lbl">booked appointments/mo at just $50/day</div></div>
+      <div class="stat"><div class="num">60–80%</div><div class="lbl">average show rate across the network</div></div>
+      <div class="stat"><div class="num">$100–150</div><div class="lbl">typical cost per booked appointment</div></div>
+      <div class="stat"><div class="num">6–8 sessions</div><div class="lbl">the package you sell — $1,200 minimum, $1,500–$2,000 typical</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="calc" id="calc">
+  <div class="wrap">
+    <h2>Run your numbers</h2>
+    <div class="sub">Set the sliders to your clinic. More fuel, more patients — the system scales with your budget.</div>
+    <div class="calcbox">
+      <div class="estwarn">⚠ These are ESTIMATES, not guarantees. Projections use typical performance across shockwave clinics running this system — your results will vary with your market, offer, consult process, and budget.</div>
+      <div>
+        <div class="ctrl">
+          <label>Daily ad budget <output id="o-spend">$50/day</output></label>
+          <input type="range" id="in-spend" min="50" max="100" step="5" value="50">
+          <div class="hint">$50/day minimum · $70/day is the network sweet spot. Paid directly to Meta.</div>
+        </div>
+        <div class="ctrl">
+          <label>Your 6–8 session package price <output id="o-pkg">$1,500</output></label>
+          <input type="range" id="in-pkg" min="1200" max="2500" step="100" value="1500">
+          <div class="hint">Sell 6–8 session packages: $1,200 minimum, $1,500–$2,000 typical.</div>
+        </div>
+        <div class="ctrl">
+          <label>Show rate <output id="o-show">60%</output></label>
+          <input type="range" id="in-show" min="40" max="90" step="5" value="60">
+          <div class="hint">Network average is 60–80% — automated no-show recovery works to push this up.</div>
+        </div>
+        <div class="ctrl">
+          <label>Your consult close rate <output id="o-close">70%</output></label>
+          <input type="range" id="in-close" min="30" max="90" step="5" value="70">
+          <div class="hint">Of patients who show, how many buy a package? These are warm, pre-qualified bookings.</div>
+        </div>
+        <div class="ctrl">
+          <label>Cost per booked appointment</label>
+          <div class="pills">
+            <div class="pill" data-cpb="100">$100<small>aggressive</small></div>
+            <div class="pill on" data-cpb="125">$125<small>typical</small></div>
+            <div class="pill" data-cpb="150">$150<small>conservative</small></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="roi-hero"><div class="r" id="r-roi">2.6x</div><div class="rl">estimated return on every dollar — all-in, ongoing months</div></div>
+        <div class="flow">
+          <div class="f"><div class="v" id="r-booked">12</div><div class="l">booked</div></div>
+          <div class="f"><div class="v" id="r-shows">7</div><div class="l">show up</div></div>
+          <div class="f"><div class="v" id="r-sales">5</div><div class="l">packages sold</div></div>
+          <div class="f"><div class="v" id="r-revenue">$7,560</div><div class="l">revenue / mo</div></div>
+        </div>
+        <div class="costrows">
+          <div class="row"><span>Monthly ad budget (yours, direct to Meta)</span><span class="val" id="r-adspend">$1,500</span></div>
+          <div class="row"><span>Management fee</span><span class="val">$1,400 <small style="color:#5eead4">(first 30 days: $0)</small></span></div>
+          <div class="row"><span>Total monthly cost</span><span class="val" id="r-cost">$2,900</span></div>
+        </div>
+        <div class="profit-cards">
+          <div class="pcard m1"><div class="t">First 30 days · fee waived</div><div class="v" id="p-m1">+$6,060</div><div class="s">est. net profit · <span id="p-m1roi">5.0x</span> return</div></div>
+          <div class="pcard ong"><div class="t">Ongoing months · all-in</div><div class="v" id="p-ong">+$4,660</div><div class="s">est. net profit every month</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj">
+      <h3>Your first 6 months — estimated</h3>
+      <div class="psub">Month 1 includes ad warm-up (and $0 management fee) — then the system compounds as creatives optimize and reactivation kicks in. Estimates, not guarantees.</div>
+      <div class="chartwrap">
+        <div class="legend"><span><i style="background:#5eead4"></i>Monthly revenue</span><span><i style="background:#4ade80"></i>Monthly net profit</span></div>
+        <div class="chart" id="chart"></div>
+        <div class="totals">
+          <div class="tot"><div class="v" id="t-rev">$—</div><div class="l">6-mo revenue</div></div>
+          <div class="tot"><div class="v" id="t-cost">$—</div><div class="l">6-mo total cost</div></div>
+          <div class="tot hl"><div class="v" id="t-profit">$—</div><div class="l">6-mo net profit</div></div>
+          <div class="tot hl"><div class="v" id="t-roi">—</div><div class="l">6-mo return</div></div>
+        </div>
+      </div>
+    </div>
+
+    <p class="disclaimer">Estimates based on typical performance across shockwave clinics using this system. Projection assumes steady ad spend, a first-month warm-up period, and modest month-over-month optimization gains. New ad accounts typically need 1–2 weeks before results ramp. Actual results depend on your market, offer, consult process, and budget — figures are estimates, not guarantees.</p>
+  </div>
+</div>
+
+<div class="expect">
+  <div class="wrap">
+    <div class="exp"><b>Weeks 1–2: warm-up</b>Meta learns your market before bookings ramp — judge the system on the full 30 days, not week one.</div>
+    <div class="exp"><b>No-shows are normal</b>60–80% show is the network average. Every no-show enters an automatic re-booking sequence.</div>
+    <div class="exp"><b>You close, we book</b>We fill the calendar; your consult sells the package. One package sold typically covers the entire month.</div>
+    <div class="exp"><b>No contracts</b>Month-to-month, cancel anytime. We keep clients with results, not paperwork.</div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <b>Shockwave Marketing Package</b> · a program from Shockwave Therapy Pro<br>
+    All figures are estimates based on typical performance across shockwave clinics using this system and are not guarantees. Ad spend is paid directly to Meta Platforms, Inc. and is not included in the management fee.
+  </div>
+</footer>
+
+<script>
+  const $ = id => document.getElementById(id);
+  const fmt = n => '$' + Math.round(n).toLocaleString('en-US');
+  const FEE = 1400;
+  let cpb = 125;
+
+  document.querySelectorAll('.pill').forEach(p => p.addEventListener('click', () => {
+    document.querySelectorAll('.pill').forEach(x => x.classList.remove('on'));
+    p.classList.add('on');
+    cpb = +p.dataset.cpb;
+    calc();
+  }));
+
+  function tween(el, target, suffix){
+    const start = parseFloat(el.dataset.cur || 0), t0 = performance.now();
+    el.dataset.cur = target;
+    (function step(t){
+      const k = Math.min(1,(t-t0)/350), v = start + (target-start)*k;
+      el.textContent = suffix==='x' ? v.toFixed(1)+'x' : (v<0?'−':'+') + fmt(Math.abs(v)).replace('$','$');
+      if(k<1) requestAnimationFrame(step);
+    })(t0);
+  }
+
+  function calc(){
+    const daily = +$('in-spend').value, pkg = +$('in-pkg').value;
+    const show = +$('in-show').value/100, close = +$('in-close').value/100;
+    const spend = daily*30;
+    const booked = spend/cpb;
+    const shows = booked*show;
+    const sales = shows*close;
+    const revenue = sales*pkg;
+    const cost = spend+FEE;
+
+    $('o-spend').textContent = '$'+daily+'/day';
+    $('o-pkg').textContent = fmt(pkg);
+    $('o-show').textContent = Math.round(show*100)+'%';
+    $('o-close').textContent = Math.round(close*100)+'%';
+    $('r-booked').textContent = Math.round(booked);
+    $('r-shows').textContent = Math.round(shows);
+    $('r-sales').textContent = Math.round(sales);
+    $('r-revenue').textContent = fmt(revenue);
+    $('r-adspend').textContent = fmt(spend);
+    $('r-cost').textContent = fmt(cost);
+    tween($('r-roi'), revenue/cost, 'x');
+    tween($('p-m1'), revenue-spend);
+    $('p-m1roi').textContent = (revenue/spend).toFixed(1)+'x';
+    tween($('p-ong'), revenue-cost);
+
+    const growth = [0.75,1.00,1.05,1.10,1.15,1.20];
+    let months = growth.map((g,i)=>{
+      const rev = revenue*g, fee = i===0?0:FEE, c = spend+fee;
+      return {rev, cost:c, profit:rev-c};
+    });
+    drawChart(months);
+    const tr = months.reduce((s,m)=>s+m.rev,0), tc = months.reduce((s,m)=>s+m.cost,0), tp = tr-tc;
+    $('t-rev').textContent = fmt(tr);
+    $('t-cost').textContent = fmt(tc);
+    $('t-profit').textContent = '+'+fmt(tp);
+    $('t-roi').textContent = (tr/tc).toFixed(1)+'x';
+  }
+
+  function drawChart(months){
+    const W=680, H=190, pad=6, bw=34, gap=10, groupW=110;
+    const max = Math.max(...months.map(m=>m.rev));
+    const scale = v => Math.max(2, v/max*(H-58));
+    let s = '<svg viewBox="0 0 '+W+' '+H+'" xmlns="http://www.w3.org/2000/svg">';
+    months.forEach((m,i)=>{
+      const x0 = 14+i*groupW;
+      const hR = scale(m.rev), hP = scale(Math.max(0,m.profit));
+      const yR = H-34-hR, yP = H-34-hP;
+      s += '<rect x="'+x0+'" y="'+yR+'" width="'+bw+'" height="'+hR+'" rx="4" fill="#5eead4" opacity="0.9"/>';
+      s += '<rect x="'+(x0+bw+gap)+'" y="'+yP+'" width="'+bw+'" height="'+hP+'" rx="4" fill="#4ade80" opacity="0.9"/>';
+      s += '<text x="'+(x0+bw+gap/2)+'" y="'+(Math.min(yR,yP)-8)+'" text-anchor="middle" font-size="11" font-weight="700" fill="#e2e8f0">'+(m.profit>=0?'+':'−')+'$'+Math.abs(Math.round(m.profit/100)/10).toFixed(1)+'k</text>';
+      s += '<text x="'+(x0+bw+gap/2)+'" y="'+(H-16)+'" text-anchor="middle" font-size="11" fill="#94a3b8">M'+(i+1)+(i===0?' · fee $0':'')+'</text>';
+    });
+    s += '</svg>';
+    $('chart').innerHTML = s;
+  }
+
+  ['in-spend','in-pkg','in-show','in-close'].forEach(id=>$(id).addEventListener('input',calc));
+  calc();
+</script>
+</body>
+</html>
