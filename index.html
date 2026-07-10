@@ -175,8 +175,8 @@
       <div>
         <div class="ctrl">
           <label>Daily ad budget <output id="o-spend">$50/day</output></label>
-          <input type="range" id="in-spend" min="50" max="100" step="5" value="50">
-          <div class="hint">$50/day minimum · $70/day is the network sweet spot. Paid directly to Meta.</div>
+          <input type="range" id="in-spend" min="50" max="150" step="5" value="50">
+          <div class="hint">$50/day minimum · $70/day sweet spot. Higher budgets exit Meta's learning phase faster and unlock more creative testing — your cost per booking improves as you scale. Paid directly to Meta.</div>
         </div>
         <div class="ctrl">
           <label>Your 6–8 session package price <output id="o-pkg">$1,500</output></label>
@@ -212,6 +212,7 @@
         </div>
         <div class="costrows">
           <div class="row"><span>Monthly ad budget (yours, direct to Meta)</span><span class="val" id="r-adspend">$1,500</span></div>
+          <div class="row"><span>Effective cost per booked appointment</span><span class="val" id="r-cpb">$125</span></div>
           <div class="row"><span>Management fee</span><span class="val">$1,400 <small style="color:#5eead4">(first 30 days: $0)</small></span></div>
           <div class="row"><span>Total monthly cost</span><span class="val" id="r-cost">$2,900</span></div>
         </div>
@@ -284,7 +285,9 @@
     const daily = +$('in-spend').value, pkg = +$('in-pkg').value;
     const show = +$('in-show').value/100, close = +$('in-close').value/100;
     const spend = daily*30;
-    const booked = spend/cpb;
+    const scaleBonus = 1 + 0.5*(daily-50)/100;
+    const effCpb = Math.max(90, cpb/scaleBonus);
+    const booked = spend/effCpb;
     const shows = booked*show;
     const sales = shows*close;
     const revenue = sales*pkg;
@@ -299,6 +302,7 @@
     $('r-sales').textContent = Math.round(sales);
     $('r-revenue').textContent = fmt(revenue);
     $('r-adspend').textContent = fmt(spend);
+    $('r-cpb').textContent = fmt(effCpb);
     $('r-cost').textContent = fmt(cost);
     tween($('r-roi'), revenue/cost, 'x');
     tween($('p-m1'), revenue-spend);
