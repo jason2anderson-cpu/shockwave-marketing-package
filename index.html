@@ -16,6 +16,21 @@
   body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--ink);background:var(--bg);line-height:1.5;-webkit-font-smoothing:antialiased}
   .wrap{max-width:980px;margin:0 auto;padding:0 20px}
 
+  .nav{background:var(--navy);padding:14px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between}
+  .nav .brand{color:#fff;font-weight:800;font-size:17px;text-decoration:none;letter-spacing:-.01em}
+  .nav .brand span{color:var(--teal-bright)}
+  .nav .links{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+  .nav .links a{color:#cbd5e1;text-decoration:none;font-size:14px;font-weight:600}
+  .nav .links a:hover{color:#fff}
+  .nav .links a.navcta{background:var(--teal);color:#fff;padding:9px 18px;border-radius:9px}
+  .getstarted{background:#fff;border-top:1px solid var(--line);padding:44px 0 50px}
+  .getstarted h2{font-size:24px;font-weight:800;color:var(--navy);text-align:center;margin-bottom:8px}
+  .getstarted .lead{font-size:15.5px;color:var(--muted);text-align:center;max-width:640px;margin:0 auto 26px}
+  .getstarted .formbox{max-width:720px;margin:0 auto;background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:10px}
+  .getstarted iframe{width:100%;height:820px;border:none;border-radius:12px;background:#fff}
+  .getstarted .bookalt{text-align:center;margin-top:18px;font-size:15px;color:var(--muted)}
+  .getstarted .bookalt a{color:var(--teal);font-weight:700;text-decoration:none}
   .hdr{background:linear-gradient(160deg,var(--navy) 0%,var(--navy2) 70%,#1d4ed8 140%);color:#fff;padding:34px 0 30px;text-align:center}
   .badge{display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:#e0f2fe;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:6px 14px;border-radius:999px;margin-bottom:14px}
   .hdr h1{font-size:clamp(24px,3.6vw,34px);font-weight:800;line-height:1.15;letter-spacing:-.02em;max-width:720px;margin:0 auto 8px}
@@ -119,6 +134,11 @@
 </style>
 </head>
 <body>
+
+<nav class="nav"><div class="wrap">
+  <a class="brand" href="/">SHOCKWAVE <span>ADS</span></a>
+  <div class="links"><a href="/free-trial.html">How the Free Trial Works</a><a href="/faq.html">FAQ</a><a class="navcta" href="#get-started">Get Started</a></div>
+</div></nav>
 
 <div class="hdr">
   <div class="wrap">
@@ -251,12 +271,23 @@
   </div>
 </div>
 
+<section class="getstarted" id="get-started">
+  <div class="wrap">
+    <h2>Ready to fill your calendar?</h2>
+    <p class="lead">Tell us about your clinic — takes about 60 seconds. A real human (his name is Tyler) gets back to you within one business day. First 30 days of management are free.</p>
+    <div class="formbox">
+      <iframe src="https://api.leadconnectorhq.com/widget/form/YZ9PPxGw9xvn83TnovLV" title="Get Started — Shockwave Marketing Package"></iframe>
+    </div>
+    <div class="bookalt">Prefer to talk first? <a href="https://api.leadconnectorhq.com/widget/booking/VbEYg7Sh9p6FE2rHLpUM" target="_blank" rel="noopener">Book a free 15-minute intro call →</a></div>
+  </div>
+</section>
+
 <footer>
   <div class="wrap">
     <b>Shockwave Marketing Package</b> · a program of <b>Shockwave Ads LLC</b>, in partnership with Shockwave Therapy Pro<br>
     All figures are estimates based on typical performance across shockwave clinics using this system and are not guarantees. Ad spend is paid directly to Meta Platforms, Inc. and is not included in the management fee.<br>
     Done-for-you patient marketing for shockwave &amp; regenerative-medicine clinics · $1,400/month, month-to-month, cancel anytime · Contact: <a href="mailto:jason@shockwavetherapypro.com" style="color:#94a3b8">jason@shockwavetherapypro.com</a> · Spanish Fork, Utah<br>
-    <a href="/privacy.html" style="color:#94a3b8">Privacy Policy</a> · <a href="/terms.html" style="color:#94a3b8">Terms of Service</a> · © 2026 Shockwave Ads LLC. All rights reserved.
+    <a href="/free-trial.html" style="color:#94a3b8">How the Free Trial Works</a> · <a href="/faq.html" style="color:#94a3b8">FAQ</a> · <a href="/privacy.html" style="color:#94a3b8">Privacy Policy</a> · <a href="/terms.html" style="color:#94a3b8">Terms of Service</a> · © 2026 Shockwave Ads LLC. All rights reserved.
   </div>
 </footer>
 
