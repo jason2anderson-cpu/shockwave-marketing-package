@@ -72,7 +72,7 @@
   .estwarn{grid-column:1/-1;background:rgba(245,158,11,.12);border:1px solid rgba(245,158,11,.45);border-radius:10px;padding:10px 14px;font-size:12.5px;color:#fcd34d;text-align:center;font-weight:600;line-height:1.5}
   .ctrl{margin-bottom:16px}
   .ctrl label{display:flex;justify-content:space-between;font-size:13px;font-weight:600;color:#cbd5e1;margin-bottom:7px}
-  .ctrl label output{color:var(--teal-bright);font-weight:800;font-size:14.5px}
+  .ctrl label output{color:#2fd48b;font-weight:800;font-size:14.5px}
   input[type=range]{width:100%;-webkit-appearance:none;appearance:none;height:5px;border-radius:3px;background:rgba(255,255,255,.2);outline:none;cursor:pointer}
   input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:19px;height:19px;border-radius:50%;background:var(--teal-bright);border:3px solid var(--navy);box-shadow:0 2px 8px rgba(0,0,0,.4)}
   input[type=range]::-moz-range-thumb{width:19px;height:19px;border-radius:50%;background:var(--teal-bright);border:3px solid var(--navy)}
@@ -82,8 +82,8 @@
   .pill small{display:block;font-weight:500;font-size:10px}
   .pill.on{background:rgba(255,82,82,.15);border-color:var(--teal-bright);color:var(--teal-bright)}
 
-  .roi-hero{text-align:center;background:rgba(255,82,82,.1);border:1px solid rgba(255,82,82,.35);border-radius:14px;padding:16px 12px 14px;margin-bottom:14px}
-  .roi-hero .r{font-size:44px;font-weight:800;color:var(--teal-bright);letter-spacing:-.02em;line-height:1}
+  .roi-hero{text-align:center;background:rgba(47,212,139,.1);border:1px solid rgba(47,212,139,.35);border-radius:14px;padding:16px 12px 14px;margin-bottom:14px}
+  .roi-hero .r{font-size:44px;font-weight:800;color:#2fd48b;letter-spacing:-.02em;line-height:1}
   .roi-hero .rl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#94a3b8;margin-top:6px}
   .flow{display:flex;justify-content:space-between;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:12px 8px;margin-bottom:12px}
   .f{flex:1;text-align:center;border-right:1px solid rgba(255,255,255,.12);padding:0 6px}
@@ -94,12 +94,12 @@
   .costrows .row .val{font-weight:700;color:#fff}
   .profit-cards{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
   .pcard{border-radius:12px;padding:12px;text-align:center}
-  .pcard.m1{background:rgba(255,82,82,.14);border:1px solid rgba(255,82,82,.4)}
+  .pcard.m1{background:rgba(47,212,139,.12);border:1px solid rgba(47,212,139,.4)}
   .pcard.ong{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.35)}
   .pcard .t{font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#94a3b8;margin-bottom:3px}
-  .pcard.m1 .t{color:var(--teal-bright)}
+  .pcard.m1 .t{color:#2fd48b}
   .pcard.ong .t{color:var(--green-bright)}
-  .pcard .v{font-size:21px;font-weight:800;color:#fff;letter-spacing:-.01em}
+  .pcard .v{font-size:21px;font-weight:800;color:#2fd48b;letter-spacing:-.01em}
   .pcard .s{font-size:10.5px;color:#94a3b8;margin-top:2px}
 
   .proj{margin-top:26px}
@@ -112,7 +112,7 @@
   .tot{flex:1;min-width:140px;text-align:center;padding:4px 10px;border-right:1px solid rgba(255,255,255,.12)}
   .tot:last-child{border-right:none}
   .tot .v{font-size:19px;font-weight:800;color:#fff}
-  .tot.hl .v{color:var(--green-bright)}
+  .tot.hl .v{color:#2fd48b}
   .tot .l{font-size:10.5px;color:#94a3b8;font-weight:600;text-transform:uppercase;letter-spacing:.04em;margin-top:1px}
   .legend{display:flex;justify-content:center;gap:18px;font-size:11px;color:#94a3b8;margin-bottom:6px}
   .legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px}
@@ -237,7 +237,7 @@
         <div class="costrows">
           <div class="row"><span>Monthly ad budget (yours, direct to Meta)</span><span class="val" id="r-adspend">$1,500</span></div>
           <div class="row"><span>Effective cost per booked appointment</span><span class="val" id="r-cpb">$125</span></div>
-          <div class="row"><span>Management fee</span><span class="val">$1,400 <small style="color:#ff5252">(first 30 days: $0)</small></span></div>
+          <div class="row"><span>Management fee</span><span class="val">$1,400 <small style="color:#2fd48b">(first 30 days: $0)</small></span></div>
           <div class="row"><span>Total monthly cost</span><span class="val" id="r-cost">$2,900</span></div>
         </div>
         <div class="profit-cards">
@@ -251,7 +251,7 @@
       <h3>Your first 6 months — estimated</h3>
       <div class="psub">Month 1 includes ad warm-up (and $0 management fee) — then the system compounds as creatives optimize and reactivation kicks in. Estimates, not guarantees.</div>
       <div class="chartwrap">
-        <div class="legend"><span><i style="background:#7d9bc1"></i>Monthly revenue</span><span><i style="background:#ffffff"></i>Monthly net profit</span></div>
+        <div class="legend"><span><i style="background:#7d9bc1"></i>Monthly revenue</span><span><i style="background:#2fd48b"></i>Monthly net profit</span></div>
         <div class="chart" id="chart"></div>
         <div class="totals">
           <div class="tot"><div class="v" id="t-rev">$—</div><div class="l">6-mo revenue</div></div>
@@ -369,7 +369,7 @@
       const hR = scale(m.rev), hP = scale(Math.max(0,m.profit));
       const yR = H-34-hR, yP = H-34-hP;
       s += '<rect x="'+x0+'" y="'+yR+'" width="'+bw+'" height="'+hR+'" rx="4" fill="#7d9bc1" opacity="0.9"/>';
-      s += '<rect x="'+(x0+bw+gap)+'" y="'+yP+'" width="'+bw+'" height="'+hP+'" rx="4" fill="#ffffff" opacity="0.9"/>';
+      s += '<rect x="'+(x0+bw+gap)+'" y="'+yP+'" width="'+bw+'" height="'+hP+'" rx="4" fill="#2fd48b" opacity="0.9"/>';
       s += '<text x="'+(x0+bw+gap/2)+'" y="'+(Math.min(yR,yP)-8)+'" text-anchor="middle" font-size="11" font-weight="700" fill="#e2e8f0">'+(m.profit>=0?'+':'−')+'$'+Math.abs(Math.round(m.profit/100)/10).toFixed(1)+'k</text>';
       s += '<text x="'+(x0+bw+gap/2)+'" y="'+(H-16)+'" text-anchor="middle" font-size="11" fill="#94a3b8">M'+(i+1)+(i===0?' · fee $0':'')+'</text>';
     });
